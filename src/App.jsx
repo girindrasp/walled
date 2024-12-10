@@ -1,40 +1,15 @@
-import { useState } from "react";
 import "./App.css";
-import walledlogo from "./assets/Vector.png"
-import NavItems from "./components/NavItems";
+import Hero from "./components/Hero.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const menu = [
-    {
-      title: "Dashboard",
-      link: "#"
-    },
-    {
-      title: "Transfer",
-      link: "#"
-    },
-    {
-      title: "Top Up",
-      link: "#"
-    },
-    {
-      title: "Sign Out",
-      link: "#"
-    }
-  ]
 
-  return (
-    <>
-      {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
-      <nav className = "flex items-center w-screen justify-between bg-white py-4 px-8">
-        <img src = {walledlogo}/>
-        <div className="flex gap-x-8">
-          <NavItems menu={menu} />
-        </div>
-      </nav>
-    </>
-  );
+
+    return (
+      <main>
+        <Hero />
+      </main>
+    );
+
 }
 
 export default App;
