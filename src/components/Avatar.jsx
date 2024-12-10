@@ -1,32 +1,6 @@
 import { useState } from "react";
 import nonFormal from "../assets/nonFormal.jpg";
 
-// function Avatar() {
-//   const [isAvatarActive, setIsAvatarActive] = useState(false);
-
-//   <div className="flex justify-between py-4 px-8">
-//     <div>
-//       <h1 className="font-bold">Good Morning, Mas Pras</h1>
-//       <p className="pl-2 px-10">
-//         Check all your incoming and outgoing transactions here
-//       </p>
-//     </div>
-
-//     <div className="flex items-center gap-6">
-//       <div>
-//         <h2 className="font-bold">Girindra Syukran Prahasto</h2>
-//         <p>Personal Account</p>
-//       </div>
-//       <div>
-//         <img
-//           src={nonFormal}
-//           className="flex items-right rounded-full w-20 h-20 aspect-square object-cover hover:ring-8 hover:ring-blue-500 transition-all duration-300"
-//         />
-//       </div>
-//     </div>
-//   </div>;
-// }
-
 function Avatar() {
     const [isAvatarActive, setIsAvatarActive] = useState(false);
   
