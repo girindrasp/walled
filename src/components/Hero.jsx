@@ -1,22 +1,30 @@
 import Avatar from "./Avatar.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import viewIcon from '../assets/viewicon.png'
 
 function Hero() {
   const [showBalance, setShowBalance] = useState(true);
+  const [userName, setUserName] = useState("")
+  useEffect(() => {
+    const loginOBJ = localStorage.getItem("login")
+    if (loginOBJ) {
+        const email  = JSON.parse(loginOBJ).email;
+        setUserName(email);
+    }
+  }, []);
 
   return (
     <section className="w-full px-16 mt-12">
       <div className="flex items-center justify-center">
         <div className="mr-auto">
           <h1 className="text-black text-6xl font-bold">
-            Good Evening, Mas Pras!
+            Good Evening, { userName }!
           </h1>
           <p className="text-black text-2xl mt-3">
             Check all your incoming and outgoing transactions here
           </p>
         </div>
-        <Avatar />
+        <Avatar/>
       </div>
       <div className="flex mt-[4.5rem] gap-x-12">
         <div className="bg-[#19918F] p-12 rounded-2xl w-1/5">
