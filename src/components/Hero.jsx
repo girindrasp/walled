@@ -1,15 +1,50 @@
 import Avatar from "./Avatar.jsx";
 import { useEffect, useState } from "react";
 import viewIcon from '../assets/viewicon.png'
+import TableApp from "./TableApp.jsx";
+import TableRow from "./TableRow.jsx";
 
 function Hero() {
   const [showBalance, setShowBalance] = useState(true);
-  const [userName, setUserName] = useState("")
+  const [users, setUsers] = useState([]);
+  const [userName, setUserName] = useState([])
+  const [balance, setBalance] = useState([])
+  const [password, setPassword] = useState([])
+
+  useEffect(() => {
+    async function getData() {
+      const url = "http://127.0.0.1:3000/users";
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        setUsers(json);
+        console.log(json);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    getData();
+  }, []);
+
   useEffect(() => {
     const loginOBJ = localStorage.getItem("login")
     if (loginOBJ) {
-        const email  = JSON.parse(loginOBJ).email;
-        setUserName(email);
+        const json  = (JSON.parse(loginOBJ))
+        console.log(json)
+        setUserName(json.nama);
+    }
+  }, []);
+
+  useEffect(() => {
+    const balanceOBJ = localStorage.getItem("login")
+    if (balanceOBJ) {
+        const json  = (JSON.parse(balanceOBJ))
+        console.log(json)
+        setBalance(json.balance);
     }
   }, []);
 
@@ -18,13 +53,13 @@ function Hero() {
       <div className="flex items-center justify-center">
         <div className="mr-auto">
           <h1 className="text-black text-6xl font-bold">
-            Good Evening, { userName }!
+          {`Good Morning, ${userName}`}
           </h1>
           <p className="text-black text-2xl mt-3">
             Check all your incoming and outgoing transactions here
           </p>
         </div>
-        <Avatar/>
+        <Avatar name = { userName }/>
       </div>
       <div className="flex mt-[4.5rem] gap-x-12">
         <div className="bg-[#19918F] p-12 rounded-2xl w-1/5">
@@ -46,6 +81,12 @@ function Hero() {
           </span>
         </div>
       </div>
+      <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Transaction Table</h1>
+      <div className="overflow-x-auto">
+        <TableApp/>
+      </div>
+    </div>
     </section>
   );
 }

@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nama": "Girindra Syukran Prahasto",
+      "email": "girindra220202@gmail.com",
+      "password": "password123",
+      "balance": 1500.75,
+      "avatar": "https://example.com/avatar1.png"
+    },
+    {
+      "id": 2,
+      "nama": "Nurin Amalia",
+      "email": "nurinap@example.com",
+      "password": "securePass456",
+      "balance": 2000,
+      "avatar": "https://example.com/avatar2.png"
+    },
+    {
+      "id": 3,
+      "nama": "Alice Johnson",
+      "email": "alicej@example.com",
+      "password": "Alice789",
+      "balance": 500.5,
+      "avatar": "https://example.com/avatar3.png"
+    }
+  ],
+
+  "transactions": [
+    {
+      "id": "1",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "DEBIT",
+      "fromTo": "310001001",
+      "description": "Fore Coffee",
+      "amount": -75000.0
+    },
+    {
+      "id": "2",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "CREDIT",
+      "fromTo": "1001",
+      "description": "Topup from Bank Transfer",
+      "amount": 1000000.0
+    },
+    {
+      "id": "3",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "DEBIT",
+      "fromTo": "310001001",
+      "description": "Fore Coffee",
+      "amount": -75000.0
+    },
+    {
+      "id": "4",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "CREDIT",
+      "fromTo": "1001",
+      "description": "Topup from Bank Transfer",
+      "amount": 1000000.0
+    },
+    {
+      "id": "5",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "DEBIT",
+      "fromTo": "310001001",
+      "description": "Fore Coffee",
+      "amount": -75000.0
+    },
+    {
+      "id": "6",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "CREDIT",
+      "fromTo": "1001",
+      "description": "Topup from Bank Transfer",
+      "amount": 1000000.0
+    },
+    {
+      "id": "7",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "DEBIT",
+      "fromTo": "310001001",
+      "description": "Fore Coffee",
+      "amount": -75000.0
+    },
+    {
+      "id": "8",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "CREDIT",
+      "fromTo": "1001",
+      "description": "Topup from Bank Transfer",
+      "amount": 1000000.0
+    },
+    {
+      "id": "9",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "DEBIT",
+      "fromTo": "310001001",
+      "description": "Fore Coffee",
+      "amount": -75000.0
+    },
+    {
+      "id": "10",
+      "dateTime": "20:10 - 30 June 2022",
+      "type": "CREDIT",
+      "fromTo": "1001",
+      "description": "Topup from Bank Transfer",
+      "amount": 1000000.0
+    }
+  ]
+  
+}

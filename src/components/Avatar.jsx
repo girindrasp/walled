@@ -1,22 +1,14 @@
 import { useEffect, useState } from "react";
 import nonFormal from "../assets/nonFormal.jpg";
 
-function Avatar() {
+function Avatar( { name }) {
     const [isAvatarActive, setIsAvatarActive] = useState(false)
     const [userName, setUserName] = useState("")
-    useEffect(() => {
-      const loginOBJ = localStorage.getItem("login")
-      if (loginOBJ) {
-          const email  = JSON.parse(loginOBJ).email;
-          setUserName(email);
-      }
-    }, []);
 
-    // const userEmail = localStorage.setItem("login" , JSON.stringify(loginForm) )
     return (
       <div className="flex items-center gap-x-4 ml-auto">
         <span className="text-right">
-          <p className="text-black font-bold">{userName}</p>
+          <p className="text-black font-bold">{name}</p>
           <p className="text-black">Personal Account</p>
         </span>
         <div
